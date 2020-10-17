@@ -1,0 +1,38 @@
+{
+  "env": {
+    "node": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "new-cap": 2,
+    "no-invalid-this": 2,
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
+    "no-plusplus": 0,
+    "no-unused-expressions": [2, {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }],
+    "arrow-parens": [2, "as-needed"],
+    "@typescript-eslint/indent": [2, 2],
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "max-len": ["error", { "code": 120 }]
+  }
+}
