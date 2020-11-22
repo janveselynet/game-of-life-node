@@ -4,7 +4,10 @@ Node.js implementation of [Game of Life](https://en.wikipedia.org/wiki/Conway%27
 
 ## How to run application
 
-TBD
+```
+yarn build
+node build/index.js -i input.xml -o output.xml
+```
 
 ## Sample input
 
@@ -53,4 +56,6 @@ TBD
 
 ## How to run tests
 
-TBD
+```
+yarn test
+```
