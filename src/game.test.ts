@@ -25,6 +25,10 @@ describe('runGame', () => {
       createSampleWorld('3'),
       createSampleWorld('4'),
     ];
+    const gameDefinition = {
+      initialWorld: worlds[0],
+      numberOfIterations: NUMBER_OF_ITERATIONS,
+    };
     const rules = [reproductionRule];
 
     const evolveWorldMock = jest.spyOn(worldEvolution, 'evolveWorld')
@@ -32,7 +36,7 @@ describe('runGame', () => {
       .mockReturnValueOnce(worlds[2])
       .mockReturnValueOnce(worlds[3]);
 
-    const finalWorld = runGame(worlds[0], rules, NUMBER_OF_ITERATIONS);
+    const finalWorld = runGame(gameDefinition, rules);
 
     expect(finalWorld).toBe(worlds[3]);
 
